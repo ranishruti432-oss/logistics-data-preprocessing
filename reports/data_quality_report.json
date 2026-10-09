@@ -1,0 +1,102 @@
+{
+  "raw": {
+    "rows": 2045,
+    "duplicate_shipment_ids": 45,
+    "missing_by_column": {
+      "shipment_id": 0,
+      "order_date": 0,
+      "dispatch_date": 0,
+      "delivery_date": 102,
+      "origin_city": 0,
+      "destination_city": 0,
+      "distance_km": 83,
+      "carrier": 61,
+      "vehicle_type": 41,
+      "priority": 0,
+      "weight_kg": 121,
+      "freight_cost_inr": 101,
+      "delivery_status": 0
+    }
+  },
+  "unique_labels_after_standardising": {
+    "origin_city": 7,
+    "destination_city": 11,
+    "carrier": 5,
+    "vehicle_type": 4,
+    "delivery_status": 3
+  },
+  "unique_labels_before": {
+    "origin_city": 24,
+    "destination_city": 34,
+    "carrier": 26,
+    "vehicle_type": 4,
+    "delivery_status": 9
+  },
+  "rows_after_dedup": 2000,
+  "rule_violations": {
+    "invalid_distance": 12,
+    "weight_exceeds_vehicle_capacity": 11,
+    "non_positive_cost": 3,
+    "impossible_delivery_date": 14,
+    "dispatch_before_order": 0
+  },
+  "imputation": {
+    "missing_before_imputation": {
+      "carrier": 60,
+      "vehicle_type": 40,
+      "distance_km": 92,
+      "weight_kg": 131,
+      "freight_cost_inr": 103,
+      "delivery_date": 115
+    },
+    "typical_delay_days": 0.0
+  },
+  "weight_outliers_capped": 20,
+  "cost_outliers_corrected": 22,
+  "severe_delay_flagged_not_removed": 73,
+  "clean": {
+    "rows": 2000,
+    "duplicate_shipment_ids": 0,
+    "missing_by_column": {
+      "shipment_id": 0,
+      "order_date": 0,
+      "dispatch_date": 0,
+      "delivery_date": 21,
+      "origin_city": 0,
+      "destination_city": 0,
+      "distance_km": 0,
+      "carrier": 0,
+      "vehicle_type": 0,
+      "priority": 0,
+      "weight_kg": 0,
+      "freight_cost_inr": 0,
+      "delivery_status": 0,
+      "distance_imputed": 0,
+      "weight_imputed": 0,
+      "cost_imputed": 0,
+      "delivery_imputed": 0,
+      "weight_kg_outlier": 0,
+      "cost_outlier": 0,
+      "dispatch_lag_days": 0,
+      "transit_days": 21,
+      "expected_transit_days": 0,
+      "delay_days": 21,
+      "is_late": 21,
+      "cost_per_km": 0,
+      "order_month": 0,
+      "severe_delay_flag": 0,
+      "weight_kg_norm": 0,
+      "distance_km_norm": 0,
+      "freight_cost_inr_norm": 0,
+      "transit_days_z": 21,
+      "delay_days_z": 21
+    }
+  },
+  "in_transit_rows_without_delivery_date": 21,
+  "share_of_cells_imputed": {
+    "distance": 4.6,
+    "weight": 6.55,
+    "cost": 5.15,
+    "delivery": 4.7
+  }
+}
